@@ -37,15 +37,22 @@ const formatarValidade = (valor) => {
     : numeros;
 };
 
-const classeInput = "";
+const classeInput =
+  "min-h-[50px] w-full rounded-xl border border-[#cfd5e4] bg-[#fbfcff] px-3.5 py-3 text-[#15203c] transition placeholder:text-[#9ca4b7] focus:border-[#1836d4] focus:outline-none focus:ring-3 focus:ring-[#1836d4]/10 aria-[invalid=true]:border-[#c93737]";
 
 function Campo({ id, label, erro, children }) {
   return (
-    <div>
-      <label htmlFor="id">{label}</label>
+    <div className="mb-[19px]">
+      <label className="mb-2 block text-sm font-bold" htmlFor={id}>
+        {label}
+      </label>
       {children}
       {erro && (
-        <p id={`${id}-erro`} role="alert">
+        <p
+          className="mt-1.5 mb-0 text-[0.8rem] text-[#c93737]"
+          id={`${id}-erro`}
+          role="alert"
+        >
           {erro}
         </p>
       )}
@@ -66,31 +73,50 @@ export default function Pagamento() {
   const validade = register("validade");
 
   return (
-    <main>
+    <main className="min-h-screen bg-[#f4f6fb]">
       <Header etapa="Pagamento" />
-      <section>
+      <section className="mx-auto grid w-[min(1160px,calc(100%-24px))] grid-cols-1 items-start gap-[30px] py-[30px] pb-[52px] sm:w-[min(1160px,calc(100%-40px))] sm:py-[38px] sm:pb-20 min-[861px]:grid-cols-[minmax(0,1fr)_370px] min-[861px]:gap-12 min-[861px]:pt-[58px]">
         <article aria-labelledby="titulo-pagamento">
-          <Link to="/">
-            <ArrowLeft aria-hidden="true" /> Voltar ao carrinho
+          <Link
+            className="inline-flex items-center gap-2 text-sm text-[#68718a] no-underline transition-colors hover:text-[#1836d4]"
+            to="/"
+          >
+            <ArrowLeft size={17} aria-hidden="true" /> Voltar ao carrinho
           </Link>
-          <div>
-            <p>Última etapa</p>
-            <h1 id="titulo-pagamento">Como você quer pagar?</h1>
-            <p>
+          <div className="my-5 mb-6 max-w-[620px] sm:mb-7">
+            <p className="mb-2.5 text-[0.78rem] font-extrabold tracking-[0.12em] text-[#1836d4] uppercase">
+              Última etapa
+            </p>
+            <h1
+              className="mb-3 font-['Manrope'] text-4xl leading-[1.05] font-extrabold tracking-[-0.055em] text-[#15203c] sm:text-[clamp(2rem,4.5vw,3.4rem)]"
+              id="titulo-pagamento"
+            >
+              Como você quer pagar?
+            </h1>
+            <p className="m-0 text-[1.04rem] leading-[1.6] text-red-500">
               Esse processo é somente uma simulação! Ultilize dados ficticios!
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(pagar)} noValidate>
-            <div>
-              <span>
-                <CreditCard aria-hidden="true" />
+          <form
+            className="rounded-[20px] border border-[#dfe3ee] bg-white p-[22px] shadow-[0_12px_40px_rgba(19,35,92,0.06)] sm:rounded-3xl sm:p-7"
+            onSubmit={handleSubmit(pagar)}
+            noValidate
+          >
+            <div className="mb-[26px] grid grid-cols-[auto_1fr_auto] items-center gap-3.5 border-b border-[#dfe3ee] pb-[22px]">
+              <span className="grid size-11 place-items-center rounded-xl bg-[#edf0ff] text-[#1836d4]">
+                <CreditCard size={22} aria-hidden="true" />
               </span>
               <div>
-                <strong>Cartão de credito</strong>
-                <small>Pagamento Simulado</small>
+                <strong className="block">Cartão de credito</strong>
+                <small className="mt-[3px] block text-[#68718a]">
+                  Pagamento Simulado
+                </small>
               </div>
-              <span aria-hidden="true" />
+              <span
+                className="size-[18px] rounded-full border-[5px] border-[#1836d4]"
+                aria-hidden="true"
+              />
             </div>
 
             <Campo
@@ -117,7 +143,7 @@ export default function Pagamento() {
             >
               <div>
                 <input
-                  className={classeInput}
+                  className={`${classeInput} pr-[46px]`}
                   id="numeroCartao"
                   type="text"
                   inputMode="numeric"
@@ -137,11 +163,15 @@ export default function Pagamento() {
                     )
                   }
                 />
-                <CreditCard aria-hidden="true" />
+                <CreditCard
+                  className="absolute top-[15px] right-3.5 text-[#7e879d]"
+                  size={20}
+                  aria-hidden="true"
+                />
               </div>
             </Campo>
 
-            <div>
+            <div className="grid grid-cols-1 gap-0 sm:grid-cols-2 sm:gap-4">
               <Campo
                 id="validade"
                 label="Validade"
@@ -189,26 +219,40 @@ export default function Pagamento() {
                       ),
                   })}
                 />
-                <small id="cvv-ajuda">3 dígitos no verso</small>
+                <small
+                  id="cvv-ajuda"
+                  className="mt-1.5 block text-xs text-[#0647fa]"
+                >
+                  3 dígitos no verso
+                </small>
               </Campo>
             </div>
 
-            <button type="submit" disabled={processando} aria-live="polite">
+            <button
+              className="inline-flex min-h-[52px] w-full cursor-pointer items-center justify-center gap-2.5 rounded-[14px] border-0 bg-[#c8ff2f] px-5 py-3.5 font-bold text-[#0d1d58] transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(58,95,255,0.22)] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+              type="submit"
+              disabled={processando}
+              aria-live="polite"
+            >
               {processando ? (
                 <>
-                  <span aria-hidden="true"> Processando Compra...</span>
+                  <span
+                    className="size-[18px] animate-spin rounded-full border-2 border-[#0d1d58]/25 border-t-[#0d1d58]"
+                    aria-hidden="true"
+                  />{" "}
+                  Processando Pagamento…
                 </>
               ) : (
                 <>
-                  <LockKeyhole aria-hidden="true" /> Fazer Pagamento
+                  <LockKeyhole size={18} aria-hidden="true" /> Fazer Pagamento
                 </>
               )}
             </button>
           </form>
         </article>
 
-        <div>
-          <div>
+        <div className="order-first flex flex-col gap-[18px] min-[861px]:order-none">
+          <div className="hidden rounded-[20px] border border-[#dfe3ee] bg-white px-5 py-2 min-[861px]:block">
             {produtos.map((produto) => (
               <ItemCarrinho key={produto.id} produto={produto} compacto />
             ))}

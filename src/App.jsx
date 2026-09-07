@@ -6,7 +6,7 @@ import Falha from "./pages/falha";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen min-w-80 bg-[#f4f6fb] font-['DM_Sans'] text-[#15203c] antialiased [&_:focus-visible]:outline-3 [&_:focus-visible]:outline-offset-3 [&_:focus-visible]:outline-[#6e87ff] motion-reduce:[&_*]:transition-none motion-reduce:[&_*]:animate-none">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Carrinho />} />

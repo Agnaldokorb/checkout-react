@@ -3,7 +3,7 @@ export const limparNumeroCartao = (numero) =>
 
 export const possuiDigitosIguais = (numero) => {
   const numeroLimpo = limparNumeroCartao(numero);
-  return /^(\d)\1{16}$/.test(numeroLimpo);
+  return /^(\d)\1{15}$/.test(numeroLimpo);
 };
 
 export const processarPagamento = (numeroCartao) =>
