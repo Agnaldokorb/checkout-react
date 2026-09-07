@@ -1,6 +1,6 @@
 import { calcularSubtotal, formatarMoeda } from "../utils/moeda"
 
-export default function ItemCarinho({produto, compacto = false}) {
+export default function ItemCarrinho({produto, compacto = false}) {
     const Icone = produto.Icone
     const Corres = {
         Preta: "bg-black",
