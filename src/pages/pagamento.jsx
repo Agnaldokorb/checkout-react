@@ -138,7 +138,12 @@ export default function Pagamento() {
 
             <Campo
               id="numeroCartao"
-              label="Número do cartão"
+              label={
+                <span className="flex items-center gap-2">                  
+                  Número do cartão
+                  <CreditCard size={18} />
+                </span>
+              }
               erro={errors.numeroCartao?.message}
             >
               <div>
@@ -162,11 +167,6 @@ export default function Pagamento() {
                       { shouldValidate: false },
                     )
                   }
-                />
-                <CreditCard
-                  className="absolute top-[15px] right-3.5 text-[#7e879d]"
-                  size={20}
-                  aria-hidden="true"
                 />
               </div>
             </Campo>
