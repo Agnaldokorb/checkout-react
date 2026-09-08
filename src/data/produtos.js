@@ -7,7 +7,7 @@ export const produtos = [
         categoria: "Eletrodomestico",
         preco: 1320.99,
         quantidade: 2,
-        cor: "Preta",
+        cor: "Preto",
         Icone: Tv,
     },
     {
@@ -16,7 +16,7 @@ export const produtos = [
         categoria: "Som Portatil",
         preco: 1859.99,
         quantidade: 1,
-        cor: "Preta",
+        cor: "Verde",
         Icone: BoomBox,
     },
     {
@@ -25,7 +25,7 @@ export const produtos = [
         categoria: "Eletronicos",
         preco: 56.99,
         quantidade: 5,
-        cor: "Preta",
+        cor: "Cinza",
         Icone: Mic,
     },
     {
@@ -34,7 +34,7 @@ export const produtos = [
         categoria: "Discos",
         preco: 156.85,
         quantidade: 10,
-        cor: "Preta",
+        cor: "Vermelho",
         Icone: Disc3,
     },
 ]

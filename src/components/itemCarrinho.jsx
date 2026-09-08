@@ -3,11 +3,11 @@ import { calcularSubtotal, formatarMoeda } from "../utils/moeda";
 export default function ItemCarrinho({ produto, compacto = false }) {
   const Icone = produto.Icone;
   const cores = {
-    Preta: "bg-black text-white",
-    Verde: "bg-green ",
-    Branco: "bg-white text-blue",
-    NA: "bg-transparent text-red",
-  };
+  Preto: "bg-black text-white",
+  Verde: "bg-green-500 text-white",
+  Cinza: "bg-gray-300 text-red-800",
+  Vermelho: "bg-red-500 text-white",
+};
 
   const classeItem = compacto
     ? "grid grid-cols-[44px_minmax(0,1fr)_auto] items-center gap-3 border-t border-[#dfe3ee] py-3.5 first:border-t-0"
