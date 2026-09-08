@@ -1,6 +1,16 @@
-import { ShoppingBag } from "lucide-react";
 import Logo from "./logo.jsx";
 import { produtos } from "../data/produtos.js";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import Badge, { badgeClasses } from "@mui/material/Badge";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCartOutlined";
+
+const CartBadge = styled(Badge)`
+  & .${badgeClasses.badge} {
+    top: -12px;
+    right: -6px;
+  }
+`;
 
 export default function Header({ etapa }) {
   const quantidade = produtos.reduce(
@@ -21,8 +31,14 @@ export default function Header({ etapa }) {
             className="inline-flex items-center gap-2 rounded-full bg-[#f1f3fa] px-3 py-2.5 text-[#15203c]"
             aria-label={`${quantidade} itens no carrinho`}
           >
-            <ShoppingBag size={18} aria-hidden="true" />
-            {quantidade}
+            <IconButton aria-label="view cart with 2 items">
+              <ShoppingCartIcon fontSize="small" />
+              <CartBadge
+                badgeContent={quantidade}
+                color="primary"
+                overlap="circular"
+              />
+            </IconButton>
           </span>
         </div>
       </div>
