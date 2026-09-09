@@ -49,11 +49,11 @@ export default function ResultadoCompra({ tipo }) {
         >
           {sucesso ? (
             <>
-              <ArrowLeft size={18} aria-label="true" /> Carrinho
+              <ArrowLeft size={18} aria-hidden="true" /> Carrinho
             </>
           ) : (
             <>
-              <RotateCcw size={18} aria-label="true" /> Tentar novamente
+              <RotateCcw size={18} aria-hidden="true" /> Tentar novamente
             </>
           )}
         </Link>

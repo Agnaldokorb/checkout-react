@@ -31,7 +31,7 @@ export default function Header({ etapa }) {
             className="inline-flex items-center gap-2 rounded-full bg-[#f1f3fa] px-3 py-2.5 text-[#15203c]"
             aria-label={`${quantidade} itens no carrinho`}
           >
-            <IconButton aria-label="view cart with 2 items">
+            <IconButton aria-label={`${quantidade} itens no carrinho`}>
               <ShoppingCartIcon fontSize="small" />
               <CartBadge
                 badgeContent={quantidade}

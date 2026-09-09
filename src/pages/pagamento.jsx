@@ -157,7 +157,7 @@ export default function Pagamento() {
                   maxLength="19"
                   aria-invalid={Boolean(errors.numeroCartao)}
                   aria-describedby={
-                    errors.numeroCartao ? "nomeroCartao-erro" : undefined
+                    errors.numeroCartao ? "numeroCartao-erro" : undefined
                   }
                   {...numero}
                   onChange={(evento) =>
