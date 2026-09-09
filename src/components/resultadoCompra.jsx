@@ -25,7 +25,7 @@ export default function ResultadoCompra({ tipo }) {
           {sucesso ? "Pagamento aprovado" : "Pagamento Recusado"}
         </p>
         <h1 className="mb-3 font-['Manrope'] text-4xl leading-[1.05] font-extrabold tracking-[-0.055em] text-[#15203c] sm:text-[clamp(2rem,4.5vw,3.4rem)]">
-          {sucesso ? "Seu pedido Foi Confirmado" : "Seu pedido foi Recusado"}
+          {sucesso ? "Seu pedido Foi Confirmado" : "Tentativa de golpe"}
         </h1>
         <p className="mx-auto mb-7 max-w-[500px] leading-[1.65] text-[#68718a] text-xl">
           {sucesso

@@ -240,7 +240,7 @@ export default function Pagamento() {
                     className="size-[18px] animate-spin rounded-full border-2 border-[#0d1d58]/25 border-t-[#0d1d58]"
                     aria-hidden="true"
                   />{" "}
-                  Processando Pagamento…
+                  Processando compra…
                 </>
               ) : (
                 <>
