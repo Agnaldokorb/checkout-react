@@ -94,7 +94,7 @@ export default function Pagamento() {
               Como você quer pagar?
             </h1>
             <p className="m-0 text-[1.04rem] leading-[1.6] text-red-500">
-              Esse processo é somente uma simulação! Ultilize dados ficticios!
+              Esse processo é somente uma simulação! Utilize dados fictícios!
             </p>
           </div>
 

@@ -7,7 +7,7 @@ export default function ResultadoCompra({ tipo }) {
 
   return (
     <section className="min-h-screen bg-[#edf1fa]">
-      <Header etapa={sucesso ? "Pedico Confirmado" : "Pagamento Recusado"} />
+      <Header etapa={sucesso ? "Pedido Confirmado" : "Pagamento Recusado"} />
       <main className="mx-auto w-[min(620px,calc(100%-40px))] py-[60px] text-center sm:py-[84px]">
         <div
           className={`mx-auto mb-7 grid size-[82px] place-items-center rounded-[28px_10px] ${
