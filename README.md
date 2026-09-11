@@ -158,15 +158,15 @@ A inteligência artificial foi utilizada como apoio na revisão dos requisitos e
 
 - **Repositório no GitHub:** [[Link GitHub]](https://github.com/Agnaldokorb/checkout-react.git)
 - **Quadro público no Trello:** [[Link para o Trello]](https://trello.com/invite/b/6a9ed6eda0aa18b737ef78a6/ATTIfa0e32874295af71601668c6b8b10a2cEF0195FB/checkout-react)
-- **Vídeo de apresentação:** [[Link Video Apresentação]](https://google.com)
+- **Vídeo de apresentação:** [[Link Video Apresentação]](https://drive.google.com/file/d/12AoY1iKT6C0D-bCqdnj6xNBEUCObSnii/view?usp=sharing)
 - **Aplicação publicada:** [[Link Publicado Vercel]](https://checkout-react-gamma.vercel.app/)
 
 ## Checklist antes da entrega
 
 - [X] Adicionar o link correto do repositório.
 - [X] Adicionar o link público do Trello.
-- [ ] Adicionar o link do vídeo com permissão para visualização.
-- [ ] Confirmar que o código final está integrado à branch `main`.
-- [ ] Confirmar o acesso do avaliador ao repositório.
-- [ ] Conferir se o vídeo possui no máximo sete minutos.
-- [ ] Enviar todos os links solicitados no AVA dentro do prazo.
+- [X] Adicionar o link do vídeo com permissão para visualização.
+- [X] Confirmar que o código final está integrado à branch `main`.
+- [X] Confirmar o acesso do avaliador ao repositório.
+- [X] Conferir se o vídeo possui no máximo sete minutos.
+- [X] Enviar todos os links solicitados no AVA dentro do prazo.
